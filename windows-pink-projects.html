@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="window-container">
+        
+      
+        <img src="designs/windows-pink-projects.png" alt="Projects Form Window" class="pixel-render">
+
+        
+        <button id="theme-toggle" class="cat-toggle-btn-projects" aria-label="Toggle Dark Mode">
+          <img id="cat-icon" src="animation/catwhiteee.gif" alt="Cat Theme Toggle">
+        </button>
+
+        <h1 class="projects-header-title">PROJECTS</h1>
+        
+        <div class="projects-content-overlay">
+          
+          <div class="project-card-slot">
+            
+            <img src="designs/pusa animation.png" alt="Project 1 Animation" class="project-media-asset">
+            <p class="project-card-title">I used LibreSprite to create a cat animation for the dark mode and light mode toggle on my portfolio website.</p>
+          </div>
+          
+          <div class="project-card-slot">
+            
+            <img src="designs/login form.png" alt="Project 2 Animation" class="project-media-asset">
+            <p class="project-card-title">I used HTML and CSS to design this login form. It was my first time creating a project using CSS, which helped me learn the basics of styling and designing web pages.</p>
+          </div>
+
+          <div class="project-card-slot">
+            
+            <img src="designs/music player.png" alt="Project 3 Animation" class="project-media-asset">
+            <p class="project-card-title">I used HTML, CSS, and JavaScript to create this music player. Currently, it can play one song, with buttons to play, pause, skip forward, and go back to the previous part of the song.</p>
+          </div>
+
+        </div>
+
+        
+        <a href="index.html" class="back-dashboard-btn">BACK TO HOME</a>
+    </div>
+
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const catIcon = document.getElementById('cat-icon');
+
+    
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-theme');
+      catIcon.src = 'animation/cat-purplee.gif';
+    }
+
+    
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      
+      if (document.body.classList.contains('dark-theme')) {
+        catIcon.src = 'animation/cat-purplee.gif';
+        localStorage.setItem('theme', 'dark'); 
+      } else {
+        catIcon.src = 'animation/catwhiteee.gif';
+        localStorage.setItem('theme', 'light'); 
+      }
+    });
+  </script>
+
+</body>
+</html>

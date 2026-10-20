@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Portfolio :3</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 100vh; box-sizing: border-box; padding: 20px; position: relative;">
+
+    <div class="window-container" style="position: relative;">
+      
+      
+      <img src="designs/home-windows-formm.png" alt="Window Frame" class="pixel-render">
+      
+      <button id="theme-toggle" class="cat-toggle-btn" aria-label="Toggle Dark Mode">
+        
+        <img id="cat-icon" src="animation/catwhiteee.gif" alt="Cat Theme Toggle">
+      </button>
+      
+      <h1 class="window-title">Home</h1>
+      
+      <div class="intro-text-area">
+        <h2>
+          <span class="text_1"> HI, I'M CHELSEA :3 </span>
+        </h2>
+        <p>I'm a college student learning full-stack development, exploring pixel art and animation, and building creative, retro-inspired web experiences.</p>
+      </div>
+
+      <nav class="portfolio-nav">
+        <div class="portfolio-nav" style="display: flex; justify-content: center; gap: 30px;">
+          
+          <a href="aboutme-windows-forms.html" class="pixel-button">ABOUT ME</a>
+          <a href="windows-teal-skills.html" class="pixel-button">SKILLS</a>
+          <a href="windows-pink-projects.html" class="pixel-button">PROJECTS</a>
+        </div>
+      </nav>
+    </div>
+
+    
+    <div style="margin-top: 30px; display: flex; justify-content: center; gap: 40px; align-items: center; width: 100%; position: relative; z-index: 99999;">
+      
+      <a href="https://discord.com/users/1550001686398111807" target="_blank" style="cursor: pointer; text-decoration: none; display: inline-block;">
+        <img src="designs/discord.jpg" alt="Discord" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+      </a>
+      
+      <a href="https://github.com/seahinosha" target="_blank" style="cursor: pointer; text-decoration: none; display: inline-block;">
+        <img src="designs/github.jpg" alt="GitHub" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const catIcon = document.getElementById('cat-icon');
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      
+      
+      if (document.body.classList.contains('dark-theme')) {
+        catIcon.src = 'animation/cat-purplee.gif';
+      } else {
+        catIcon.src = 'animation/catwhiteee.gif';
+      }
+    });
+  </script>
+
+</body>
+</html>

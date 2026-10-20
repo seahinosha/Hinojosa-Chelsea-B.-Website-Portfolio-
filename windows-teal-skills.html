@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="window-container window-container-sub">
+  
+    
+    <img src="designs/windows-teal-skills.png" alt="Skills Form Window" class="pixel-render">
+    
+    
+    <button id="theme-toggle" class="cat-toggle-btn-skills" aria-label="Toggle Dark Mode">
+      <img id="cat-icon" src="animation/catwhiteee.gif" alt="Cat Theme Toggle">
+    </button>
+    
+    <h1 class="skills-header-title">SKILLS</h1>
+    
+    <div class="skills-content-overlay">
+      
+      <div class="skills-graphic-row">
+        <span class="skill-name">PIXEL ART / ANIMATION</span>
+        <span class="star-rating-bar">★★★★★</span>
+      </div>
+
+      <div class="skills-graphic-row">
+        <span class="skill-name">PHOTOSHOP DESIGNS</span>
+        <span class="star-rating-bar">★★★★☆</span>
+      </div>
+
+      <div class="skills-graphic-row">
+        <span class="skill-name">DRAWING / SKETCHES</span>
+        <span class="star-rating-bar">★★★★☆</span>
+      </div>
+
+      <div class="skills-graphic-row">
+        <span class="skill-name">FULL-STACK CODE</span>
+        <span class="star-rating-bar">★★★☆☆</span>
+      </div>
+
+    </div>
+    
+    
+    <a href="index.html" class="back-dashboard-btn">BACK TO HOME</a>
+  </div>
+
+  
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const catIcon = document.getElementById('cat-icon');
+
+    
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-theme');
+      catIcon.src = 'animation/cat-purplee.gif';
+    }
+
+    
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      
+      if (document.body.classList.contains('dark-theme')) {
+        catIcon.src = 'animation/cat-purplee.gif';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        catIcon.src = 'animation/catwhiteee.gif';
+        localStorage.setItem('theme', 'light'); 
+      }
+    });
+  </script>
+
+</body>
+</html>
